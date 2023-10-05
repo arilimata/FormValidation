@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Belajar Form Validation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="header container .bg-light">
+        <h2>Simple Form</h2>
+    </div>
+    <div class="container content">
+        <form name="formPendaftaran" method="post" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label>Nama</label>
+                <input type="text" name="nama" placeholder="Nama lengkap" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>NIM</label>
+                <input type="text" name="nim" placeholder="NIM" class="form-control" id="validation">
+            </div>
+            <div class="form-group">
+                <label>Mata Kuliah</label>
+                <select name="mataKuliah" class="form-control">
+                        <option value="0">Pilih Mata Kuliah</option>
+                        <option value="1">RSBP</option>
+                        <option value="2">PWEB</option>
+                        <option value="3">PBKK</option>
+                        <option value="4">Jaringan Komputer</option>
+                        <option value="5">Pemodelan dan Simulasi</option>
+                    </select>
+            </div>
+            <div class="form-group center">
+                <label>Dosen</label>
+                <select name="namaDosen" class="form-control">
+                        <option value="0">Nama Dosen</option>
+                        <option value="1">Fajar Baskoro</option>
+                        <option value="2">Baskoro Adi</option>
+                        <option value="3">Shintami</option>
+                        <option value="4">Abdul Munif</option>
+                        <option value="5">Hadziq Fabroyir</option>
+                    </select>
+            </div>
+            <button type="submit" class="btn btn-primary center">Submit</button>
+        </form>
+    </div>
+
+    <script src="script/script.js"></script>
+    <style>
+        .header {
+            margin-top: 5px;
+            background-color: rgb(75, 74, 74);
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .content {
+            background-color: rgb(223, 214, 214);
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</body>
+</html>
