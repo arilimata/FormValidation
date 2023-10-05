@@ -3,6 +3,7 @@
 <head>
     <title>Belajar Form Validation</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
     <div class="header container .bg-light">
@@ -10,7 +11,7 @@
     </div>
     <div class="container content">
         <form name="formPendaftaran" method="post" onsubmit="return validateForm()">
-            <div class="form-group autocomplete">
+            <div class="form-group">
                 <label>Nama</label>
                 <input autocomplete="off" id="nama" type="text" name="nama" placeholder="Nama lengkap" class="form-control">
             </div>
@@ -47,53 +48,5 @@
     </div>
 
     <script src="script/script.js"></script>
-    <style>
-        .header {
-            margin-top: 5px;
-            background-color: rgb(75, 74, 74);
-            color: white;
-            border-radius: 5px;
-            text-align: center;
-        }
-
-        .content {
-            background-color: rgb(223, 214, 214);
-            padding: 10px;
-            border-radius: 5px;
-        }
-
-        .autocomplete {
-            /*the container must be positioned relative:*/
-            position: relative;
-        }
-
-        .autocomplete-items {
-            position: absolute;
-            border: 1px solid #d4d4d4;
-            border-bottom: none;
-            border-top: none;
-            z-index: 99;
-            /*position the autocomplete items to be the same width as the container:*/
-            top: 100%;
-            left: 0;
-            right: 0;
-        }
-
-        .autocomplete-items div {
-            padding: 10px;
-            cursor: pointer;
-            background-color: #fff;
-            border-bottom: 1px solid #d4d4d4;
-        }
-            .autocomplete-items div:hover {
-            /*when hovering an item:*/
-            background-color: #e9e9e9;
-        }
-            .autocomplete-active {
-            /*when navigating through the items using the arrow keys:*/
-            background-color: DodgerBlue !important;
-            color: #ffffff;
-        }
-    </style>
 </body>
 </html>
