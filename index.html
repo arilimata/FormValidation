@@ -10,13 +10,13 @@
     </div>
     <div class="container content">
         <form name="formPendaftaran" method="post" onsubmit="return validateForm()">
-            <div class="form-group">
+            <div class="form-group autocomplete">
                 <label>Nama</label>
-                <input type="text" name="nama" placeholder="Nama lengkap" class="form-control">
+                <input autocomplete="off" id="nama" type="text" name="nama" placeholder="Nama lengkap" class="form-control">
             </div>
             <div class="form-group">
                 <label>NIM</label>
-                <input type="text" name="nim" placeholder="NIM" class="form-control" id="validation">
+                <input type="text" name="nim" placeholder="NIM" class="form-control" id="validation" onkeypress="return isNumberKey(event)">
             </div>
             <div class="form-group">
                 <label>Mata Kuliah</label>
@@ -33,11 +33,13 @@
                 <label>Dosen</label>
                 <select name="namaDosen" class="form-control">
                         <option value="0">Nama Dosen</option>
-                        <option value="1">Fajar Baskoro</option>
-                        <option value="2">Baskoro Adi</option>
-                        <option value="3">Shintami</option>
-                        <option value="4">Abdul Munif</option>
-                        <option value="5">Hadziq Fabroyir</option>
+                        <option value="1">Ir. Siti Rochimah, MT., Ph.D.</option>
+                        <option value="2">Prof. Daniel Oranova Siahaan, S.Kom., M.Sc. PD.Eng.</option>
+                        <option value="3">Sarwosri, S.Kom., MT.</option>
+                        <option value="4">Dr. Umi Laili Yuhana S.Kom., M.Sc.</option>
+                        <option value="5">Rizky Januar Akbar, S.Kom., M.Eng.</option>
+                        <option value="6">Fajar Baskoro, S.Kom., MT.</option>
+                        <option value="7">Dr. Yudhi Purwananto, S.Kom., M.Kom.</option>
                     </select>
             </div>
             <button type="submit" class="btn btn-primary center">Submit</button>
@@ -58,6 +60,39 @@
             background-color: rgb(223, 214, 214);
             padding: 10px;
             border-radius: 5px;
+        }
+
+        .autocomplete {
+            /*the container must be positioned relative:*/
+            position: relative;
+        }
+
+        .autocomplete-items {
+            position: absolute;
+            border: 1px solid #d4d4d4;
+            border-bottom: none;
+            border-top: none;
+            z-index: 99;
+            /*position the autocomplete items to be the same width as the container:*/
+            top: 100%;
+            left: 0;
+            right: 0;
+        }
+
+        .autocomplete-items div {
+            padding: 10px;
+            cursor: pointer;
+            background-color: #fff;
+            border-bottom: 1px solid #d4d4d4;
+        }
+            .autocomplete-items div:hover {
+            /*when hovering an item:*/
+            background-color: #e9e9e9;
+        }
+            .autocomplete-active {
+            /*when navigating through the items using the arrow keys:*/
+            background-color: DodgerBlue !important;
+            color: #ffffff;
         }
     </style>
 </body>
